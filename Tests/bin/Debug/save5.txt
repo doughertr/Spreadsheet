@@ -1,0 +1,1 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Spreadsheet Version=""><Cell><Name>A1</Name><Contents>hello</Contents></Cell><Cell><Name>A2</Name><Contents>5.0</Contents></Cell><Cell><Name>A3</Name><Contents>4.0</Contents></Cell><Cell><Name>A4</Name><Contents>= A2 + A3</Contents></Cell></Spreadsheet>

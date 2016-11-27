@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DependencyGraph</name>
+    </assembly>
+    <members>
+        <member name="T:SpreadsheetUtilities.DependencyGraph">
+            <summary>
+            (s1,t1) is an ordered pair of strings
+            t1 depends on s1; s1 must be evaluated before t1
+            
+            A DependencyGraph can be modeled as a set of ordered pairs of strings.  Two ordered pairs
+            (s1,t1) and (s2,t2) are considered equal if and only if s1 equals s2 and t1 equals t2.
+            Recall that sets never contain duplicates.  If an attempt is made to add an element to a 
+            set, and the element is already in the set, the set remains unchanged.
+            
+            Given a DependencyGraph DG:
+            
+               (1) If s is a string, the set of all strings t such that (s,t) is in DG is called dependents(s).
+                   (The set of things that depend on s)    
+                   
+               (2) If s is a string, the set of all strings t such that (t,s) is in DG is called dependees(s).
+                   (The set of things that s depends on) 
+            </summary>
+        </member>
+        <member name="T:SpreadsheetUtilities.DependencyGraph.Dependencies">
+            <summary>
+            This private class stores a HashSet of a single variable's 
+            dependents and dependees for a dependency graph object.
+            </summary>
+        </member>
+        <member name="M:SpreadsheetUtilities.DependencyGraph.Dependencies.#ctor">
+            <summary>
+            create a new empty dependency object
+            </summary>
+        </member>
+        <member name="F:SpreadsheetUtilities.DependencyGraph.variableDependencies">
+            <summary>
+            This Dictionary stores all the variables and their corresponding dependencies and dependees
+            </summary>
+        </member>
+        <member name="M:SpreadsheetUtilities.DependencyGraph.#ctor">
+            <summary>
+            Creates an empty DependencyGraph.
+            </summary>
+        </member>
+        <member name="P:SpreadsheetUtilities.DependencyGraph.Size">
+            <summary>
+            The number of ordered pairs in the DependencyGraph.
+            </summary>
+        </member>
+        <member name="P:SpreadsheetUtilities.DependencyGraph.Item(System.String)">
+            <summary>
+            The size of dependees(s).
+            This property is an example of an indexer.  If dg is a DependencyGraph, you would
+            invoke it like this:
+            dg["a"]
+            It should return the size of dependees("a")
+            </summary>
+        </member>
+        <member name="M:SpreadsheetUtilities.DependencyGraph.HasDependents(System.String)">
+            <summary>
+            Reports whether dependents(s) is non-empty.
+            </summary>
+        </member>
+        <member name="M:SpreadsheetUtilities.DependencyGraph.HasDependees(System.String)">
+            <summary>
+            Reports whether dependees(s) is non-empty.
+            </summary>
+        </member>
+        <member name="M:SpreadsheetUtilities.DependencyGraph.GetDependents(System.String)">
+            <summary>
+            Enumerates dependents(s).
+            </summary>
+        </member>
+        <member name="M:SpreadsheetUtilities.DependencyGraph.GetDependees(System.String)">
+            <summary>
+            Enumerates dependees(s).
+            </summary>
+        </member>
+        <member name="M:SpreadsheetUtilities.DependencyGraph.AddDependency(System.String,System.String)">
+             <summary>
+             <para>Adds the ordered pair (s,t), if it doesn't exist</para>
+             
+             <para>This should be thought of as:</para>   
+             
+               t depends on s
+            
+             </summary>
+             <param name="s"> s must be evaluated first. T depends on S</param>
+             <param name="t"> t cannot be evaluated until s is</param>        /// 
+        </member>
+        <member name="M:SpreadsheetUtilities.DependencyGraph.RemoveDependency(System.String,System.String)">
+            <summary>
+            Removes the ordered pair (s,t), if it exists
+            </summary>
+            <param name="s">s must be evaluated first. T depends on S</param>
+            <param name="t">t cannot be evaluated until s is</param>
+        </member>
+        <member name="M:SpreadsheetUtilities.DependencyGraph.ReplaceDependents(System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Removes all existing ordered pairs of the form (s,r).  Then, for each
+            t in newDependents, adds the ordered pair (s,t).
+            </summary>
+        </member>
+        <member name="M:SpreadsheetUtilities.DependencyGraph.ReplaceDependees(System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Removes all existing ordered pairs of the form (r,s).  Then, for each 
+            t in newDependees, adds the ordered pair (t,s).
+            </summary>
+        </member>
+    </members>
+</doc>

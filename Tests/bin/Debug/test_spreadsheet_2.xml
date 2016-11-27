@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Spreadsheet Version="1.0">
+	<Cell>
+		<Name>a1</Name>
+		<Contents>50.5</Contents>
+	</Cell>
+	<Cell>
+		<Name>b1</Name>
+		<Contents>=a1+49.5</Contents>
+	</Cell>
+	<Cell>
+		<Name>c1</Name>
+		<Contents>hello</Contents>
+	</Cell>
+</Spreadsheet>

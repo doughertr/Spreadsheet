@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Spreadsheet Version="default">
+	<Cell>
+		<Name>A1</Name>
+		<Contents>2</Contents>
+	</Cell>
+	<Cell>
+		<Name>A2</Name>
+		<Contents>2</Contents>
+	</Cell>
+	<Cell>
+		<Name>A3</Name>
+		<Contents>3</Contents>
+	</Cell>
+	<Cell>
+		<Name>A4</Name>
+		<Contents>4</Contents>
+	</Cell>
+	<Cell>
+		<Name>B1</Name>
+		<Contents>=A1/A2</Contents>
+	</Cell>
+	<Cell>
+		<Name>B2</Name>
+		<Contents>=A3*A4</Contents>
+	</Cell>
+	<Cell>
+		<Name>C1</Name>
+		<Contents>=B1+B2</Contents>
+	</Cell>
+</Spreadsheet>

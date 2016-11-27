@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Spreadsheet Version="TEST">
+	<Cell>
+		<Name>Y2</Name>
+		<Contents>80</Contents>
+	</Cell>
+	<Cell>
+		<Name>L7</Name>
+		<Contents>...</Contents>
+	</Cell>
+	<Cell>
+		<Name>G6</Name>
+		<Contents>=Y2/80</Contents>
+	</Cell>
+</Spreadsheet>
